@@ -28,7 +28,7 @@ class Mainpage extends Component {
                 <div style={{ marginTop: "10px" }}>
                   <button>Company Name</button> :{" "}
                   <p style={{ display: "inline-block" }}>{ele.company_name}</p>
-                  <img src={ele.logo} />
+                  <img src={ele.logo} alt="company-name" />
                 </div>
                 <div style={{ marginTop: "10px" }}>
                   <button> Title</button>
