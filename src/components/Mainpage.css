@@ -1,0 +1,16 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.divone {
+  padding: 20px;
+  text-align: center;
+
+  border-radius: 10px solid red;
+}
+.divone img {
+  /* padding: 209px; */
+}
+.divone p {
+  display: inline-block;
+}
