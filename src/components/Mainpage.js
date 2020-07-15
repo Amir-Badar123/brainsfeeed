@@ -1,64 +1,51 @@
 import React, { Component } from "react";
 import "./Mainpage.css";
-import LearnMore from "./Learn.js";
+// import LearnMore from "./Learn.js";
 
 class Mainpage extends Component {
-  state = {
-    showModalFlag: false,
-  };
-  showModalFlag = () => {
-    this.setState({
-      showModalFlag: true,
-    });
-  };
-
-  hideModalFlag = () => {
-    this.setState({
-      showModalFlag: false,
-    });
-  };
+  
   render() {
     let { CompData } = this.props;
     return CompData.map((ele) => {
       return (
+        <div>
         <div className="divone container">
-          <div className="col-md-12">
-            <div className="col-md-4">
+          <div className="col-md-mx npm run ">
+            <div className="col-md-8" >
               <div className="card">
                 <div style={{ marginTop: "10px" }}>
-                  <button>Company Name</button> :{" "}
+                  <span>Company Name</span>:
                   <p style={{ display: "inline-block" }}>{ele.company_name}</p>
                   <img src={ele.logo} alt="company-name" />
                 </div>
                 <div style={{ marginTop: "10px" }}>
-                  <button> Title</button>
+                  <span> Title</span>:
                   <p>{ele.title_}</p>
                 </div>
                 <div style={{ marginTop: "10px" }}>
-                  <button className="btn btn-secondary">
-                    {" "}
+                  <span>
+
                     Short Description
-                  </button>
+                  </span>:
                   <p>{ele.Short_description}</p>
                 </div>
                 <div style={{ marginTop: "10px" }}>
-                  <button> Specialities One</button>
+                  <span> Specialities One</span>:<brk></brk>
                   <p>{ele.specialties[1]}</p>
                 </div>
                 <div style={{ marginTop: "10px" }}>
-                  <button> Specialitiesw Two</button>
+                  <span> Specialities Two</span>:
                   <p>{ele.specialties[2]}</p>
                 </div>
               </div>
               <div style={{ marginTop: "10px" }}>
-                <button className="btn btn-primary">
-                  Learn More
-                  <LearnMore> Learn More</LearnMore>
-                </button>
+                <button
+                  className="btn btn-primary">Learn More</button>
               </div>
             </div>
           </div>
-        </div>
+          </div>
+          </div>
       );
     });
   }
